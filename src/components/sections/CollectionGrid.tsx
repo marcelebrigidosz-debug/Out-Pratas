@@ -22,6 +22,7 @@ const categories: { label: string; value: Product["category"] | "todos" }[] = [
   { label: "Brincos", value: "brincos" },
   { label: "Colares", value: "colares" },
   { label: "Pulseiras", value: "pulseiras" },
+  { label: "Pingentes", value: "pingentes" },
 ];
 
 export function CollectionGrid({ products }: CollectionGridProps) {
