@@ -8,6 +8,7 @@
  * grossa nem sombra.
  */
 import { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { ProductImage } from "@/lib/types";
 
@@ -22,12 +23,23 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
 
   return (
     <div>
-      <div className="photo-sage aspect-[3/4] w-full overflow-hidden">
-        {/* Placeholder — substituir por next/image com fotografia real do produto */}
-        <div
-          key={activeIndex}
-          className="h-full w-full animate-[fadeIn_0.6s_ease-out] transition-transform duration-[1400ms] ease-editorial hover:scale-[1.03]"
-        />
+      <div className="photo-sage relative aspect-[3/4] w-full overflow-hidden">
+        {active ? (
+          <Image
+            key={activeIndex}
+            src={active.src}
+            alt={active.alt}
+            fill
+            priority
+            sizes="(min-width: 768px) 60vw, 100vw"
+            className="animate-[fadeIn_0.6s_ease-out] object-cover transition-transform duration-[1400ms] ease-editorial hover:scale-[1.03]"
+          />
+        ) : (
+          <div
+            key={activeIndex}
+            className="h-full w-full animate-[fadeIn_0.6s_ease-out] transition-transform duration-[1400ms] ease-editorial hover:scale-[1.03]"
+          />
+        )}
       </div>
 
       {images.length > 1 && (
@@ -40,10 +52,12 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
               aria-label={`Ver ${productName} — imagem ${index + 1}`}
               aria-current={index === activeIndex}
               className={cn(
-                "photo-sage h-16 w-12 border-b-2 transition-colors duration-300",
+                "relative h-16 w-12 overflow-hidden border-b-2 transition-colors duration-300",
                 index === activeIndex ? "border-moss-500" : "border-transparent"
               )}
-            />
+            >
+              <Image src={image.src} alt="" fill sizes="48px" className="object-cover" />
+            </button>
           ))}
         </div>
       )}
