@@ -55,8 +55,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <p className="label mt-8 text-stone-500">
             {product.materials.join(", ")}
             {product.finish ? ` · Acabamento ${product.finish}` : ""}
-          </p>
-          
+         </p>
+          <a
             href={getWhatsAppCheckoutUrl(product)}
             target="_blank"
             rel="noreferrer"
