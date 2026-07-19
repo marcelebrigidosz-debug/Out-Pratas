@@ -22,7 +22,7 @@ export const product = defineType({
       name: "category",
       title: "Categoria",
       type: "string",
-      options: { list: ["aneis", "brincos", "colares", "pulseiras"] },
+      options: { list: ["aneis", "brincos", "colares", "pulseiras", "pingentes"] },
       validation: (r) => r.required(),
     }),
     defineField({ name: "price", title: "Preço (BRL)", type: "number", validation: (r) => r.required().positive() }),
