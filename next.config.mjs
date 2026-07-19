@@ -7,6 +7,9 @@ const nextConfig = {
   },
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+  experimental: {
+    serverComponentsExternalPackages: ["sanity", "@sanity/vision"],
+  },
 };
 
 export default nextConfig;
