@@ -10,6 +10,10 @@ interface ProductPageProps {
   params: { slug: string };
 }
 
+// Revalida a cada 60s: peças novas publicadas no Studio ficam
+// acessíveis sem precisar de um novo deploy.
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const products = await getProducts();
   return products.map((p) => ({ slug: p.slug }));
@@ -52,7 +56,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             {product.materials.join(", ")}
             {product.finish ? ` · Acabamento ${product.finish}` : ""}
           </p>
-          <a
+          
             href={getWhatsAppCheckoutUrl(product)}
             target="_blank"
             rel="noreferrer"
