@@ -57,7 +57,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "ui-serif", "serif"],
+        display: ["var(--font-display)", "ui-sans-serif", "sans-serif"],
         sans: ["var(--font-sans)", "ui-sans-serif", "sans-serif"],
       },
       fontSize: {
