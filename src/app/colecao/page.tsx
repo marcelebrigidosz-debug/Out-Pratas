@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Toda a curadoria Out. em um só lugar.",
 };
 
+export const revalidate = 60;
+
 export default async function ColecaoPage() {
   const products = await getProducts();
 
