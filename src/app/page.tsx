@@ -17,6 +17,10 @@ import { ProcessoCuradoria } from "@/components/sections/ProcessoCuradoria";
 import { Newsletter } from "@/components/ui/Newsletter";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
+// Revalida a cada 60s: peças novas publicadas no Studio aparecem sem
+// precisar de um novo deploy.
+export const revalidate = 60;
+
 export default function HomePage() {
   return (
     <>
