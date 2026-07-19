@@ -17,7 +17,7 @@ export interface Product {
   id: string;
   slug: string;
   name: string;
-  category: "aneis" | "brincos" | "colares" | "pulseiras";
+  category: "aneis" | "brincos" | "colares" | "pulseiras" | "pingentes";
   price: number;
   currency: "BRL";
   shortDescription: string;
