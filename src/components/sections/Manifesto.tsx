@@ -11,7 +11,7 @@ export function Manifesto() {
     <section className="atmosphere-sage relative flex min-h-[90vh] items-center overflow-hidden bg-sage-50 px-6 text-center md:px-10">
       <div className="mx-auto">
         <p className="label mb-8 text-moss-700">Manifesto</p>
-        <p className="font-display mx-auto max-w-3xl text-3xl italic leading-relaxed md:text-5xl">
+        <p className="font-sans font-medium mx-auto max-w-xl text-xl leading-relaxed tracking-tight text-ink md:text-3xl">
           Não trabalhamos com tendências passageiras. Selecionamos peças com
           personalidade, formas orgânicas e estética atemporal.
         </p>
