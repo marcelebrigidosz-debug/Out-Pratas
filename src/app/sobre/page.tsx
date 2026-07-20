@@ -6,7 +6,12 @@ export const metadata: Metadata = {
 };
 
 /**
- * Sobre — três blocos que alternam imagem/texto (esquerda-direita,
+ * Sobre — abertura editorial: título contido (~40% menor que a versão
+ * anterior), peso médio (nunca o Archivo Black usado nos títulos de
+ * seção), largura travada em ~640px e bastante respiro ao redor. O
+ * objetivo é sensação de revista impressa, não de landing page — por
+ * isso o texto nunca ocupa quase a tela inteira.
+ * Depois, três blocos que alternam imagem/texto (esquerda-direita,
  * depois direita-esquerda) em vez de uma única coluna de imagem fixa.
  * Cada bloco tem fundo e tom de verde diferente, criando o mesmo ritmo
  * de cor da Home. Ainda um ensaio, não uma página institucional.
@@ -14,11 +19,16 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <section className="bg-paper px-6 pb-30 pt-38 md:px-10">
+      <section className="bg-paper px-6 pb-24 pt-40 md:px-10 md:pb-32 md:pt-56">
         <p className="label mb-8 text-moss-700">Sobre</p>
-        <h1 className="font-display max-w-3xl text-5xl italic leading-tight md:text-7xl">
-          Uma curadoria, não uma coleção.
+        <h1 className="max-w-[640px] font-sans text-3xl font-medium leading-snug tracking-normal text-ink md:text-5xl">
+          Prata escolhida para permanecer.
         </h1>
+        <p className="mt-6 max-w-md text-sm leading-relaxed text-stone-600">
+          Selecionamos peças em prata 925 que permanecem relevantes pelo
+          desenho, pela matéria e pelo tempo. Sem excessos. Sem tendências
+          passageiras.
+        </p>
       </section>
 
       <section className="grid grid-cols-1 gap-16 bg-sage-50 px-6 py-30 md:grid-cols-[3fr_2fr] md:gap-16 md:px-10">
