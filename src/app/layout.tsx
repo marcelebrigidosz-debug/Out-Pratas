@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Archivo_Black } from "next/font/google";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Loader } from "@/components/layout/Loader";
-import { Cursor } from "@/components/layout/Cursor";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 import "./globals.css";
 
 const display = Archivo_Black({
@@ -39,11 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" className={`${display.variable} ${sans.variable}`}>
       <body className="bg-paper font-sans text-ink antialiased">
-        <Loader />
-        <Cursor />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
